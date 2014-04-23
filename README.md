@@ -1,10 +1,10 @@
-#wp-starter
+#Starter
 
-A WordPress starter template for bespoke themes, built around a modern tooling environment.
+A starter template, built around a modern tooling environment.
 
 The project provides modern tooling and a base theme structure so you can jump straight into development. It does not make any stylistic or functional assumptions, just gives you the tools you need to get on with your job.
 
-wp-starter make use of the following projects:
+Starter make use of the following projects:
 
 - http://editorconfig.org/
 - http://csslint.net/
@@ -59,7 +59,7 @@ The JS build does the following process:
 
 ##Deployment
 
-wp-starter is compatible with dploy - https://github.com/LeanMeanFightingMachine/dploy/
+Starter is compatible with dploy - https://github.com/LeanMeanFightingMachine/dploy/
 
 Example of dploy.yaml config (not part of the repository, but will be created when you install dploy)
 
@@ -74,5 +74,5 @@ Example of dploy.yaml config (not part of the repository, but will be created wh
         include:
             "style.css": "/"
         path:
-            remote: httpdocs/wp-content/themes/wp-starter/
+            remote: httpdocs/
 

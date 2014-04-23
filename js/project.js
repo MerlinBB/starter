@@ -1,14 +1,14 @@
 (function ($) {
     "use strict";
 
-    var wpstarter = {
+    var starter = {
 
         init: function () {
             this.bindUIActions();
         },
 
         bindUIActions: function () {
-            $(".btn").on("click", function (e) { wpstarter.sayHello(e); });
+            $(".btn").on("click", function (e) { starter.sayHello(e); });
         },
 
         windowLoaded: function () {
@@ -20,34 +20,23 @@
         },
 
         windowScrolled: function () {
-            // Improve performance while scrolling by not triggering hover events
-            // http://www.thecssninja.com/javascript/pointer-events-60fps
-            var body = document.documentElement;
-            var timer;
-
-            if (!body.style.pointerEvents) {
-                body.style.pointerEvents = "none";
-            }
-
-            timer = setTimeout(function () {
-                body.style.pointerEvents = "";
-            }, 200);
+            console.log("Scrolled");
         },
 
         sayHello: function (e) {
             var button = $(e.currentTarget);
-            console.log("Hello! You clicked " + button);
+            alert("Hello from " + button);
         }
 
     };
 
     // DOM Ready
-    $(function () { wpstarter.init(); });
+    $(function () { starter.init(); });
     // Images Loaded
-    $(window).load(function () { wpstarter.windowLoaded(); });
+    $(window).load(function () { starter.windowLoaded(); });
     // Window Resized (smart debounced event)
-    $(window).bind("debouncedresize", function () { wpstarter.windowResized(); });
+    $(window).bind("debouncedresize", function () { starter.windowResized(); });
     // Window Scrolled
-    $(window).on("scroll", function () { wpstarter.windowScrolled(); });
+    $(window).on("scroll", function () { starter.windowScrolled(); });
 
 } (jQuery));
