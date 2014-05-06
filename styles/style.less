@@ -5,7 +5,7 @@
 
 
 //----------------------------------------------------------------------------//
-//  Setup
+//  Setup & Create Grid
 //----------------------------------------------------------------------------//
 
 
@@ -25,6 +25,14 @@
     color:#fff;
     text-shadow:none;
 }
+
+* { box-sizing:border-box; }
+.row { .make-row(); }
+.make-grid-columns();
+.make-grid(xs);
+@media (min-width: @screen-sm-min) { .make-grid(sm); }
+@media (min-width: @screen-md-min) { .make-grid(md); }
+@media (min-width: @screen-lg-min) { .make-grid(lg); }
 
 
 //----------------------------------------------------------------------------//
@@ -101,9 +109,9 @@ input[type="submit"] {
 
 
 .page-header {
-    @media (max-width:@break-small) { }
-    @media (max-width:@break-medium) { }
-    @media (max-width:@break-large) { }
+    @media (max-width:@screen-sm-min) { }
+    @media (max-width:@screen-md-min) { }
+    @media (max-width:@screen-lg-min) { }
 }
 
 
@@ -119,7 +127,7 @@ input[type="submit"] {
 
 
 .page-footer {
-    @media (max-width:@break-small) { }
-    @media (max-width:@break-medium) { }
-    @media (max-width:@break-large) { }
+    @media (max-width:@screen-sm-min) { }
+    @media (max-width:@screen-md-min) { }
+    @media (max-width:@screen-lg-min) { }
 }
