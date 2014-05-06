@@ -43,6 +43,14 @@ module.exports = function (grunt) {
             }
         },
 
+        uncss: {
+            dist: {
+                files: {
+                    "style.css": ["index.html"]
+                }
+            }
+        },
+
         cssmin: {
             minify: {
                 src: "style.css",
@@ -128,7 +136,7 @@ module.exports = function (grunt) {
 
     // List of available tasks
     grunt.registerTask("default", []);
-    grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "cssmin", "imagemin", "notify:less"]);
+    grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "uncss", "cssmin", "imagemin", "notify:less"]);
     grunt.registerTask("buildjs", ["jshint", "concat", "uglify", "notify:js"]);
 
 };
