@@ -12,6 +12,7 @@ Starter make use of the following projects:
 - http://lesscss.org/
 - http://bower.io/
 - http://gruntjs.com/
+- https://github.com/addyosmani/grunt-uncss
 - https://github.com/ai/autoprefixer
 - http://modernizr.com/
 
@@ -47,6 +48,7 @@ The CSS build does the following process:
 - Compiles all the .less files imported into style.less
 - Autoprefixes the compiled style.css with vendor prefixes (by default it supports current browser version -2)
 - Checks the prefixed file for CSS Lint errors (based on .csslintrc config)
+- Removes uneeded rules using UNCSS
 - Minifies the file
 - Optimises all images
 - Mac OSX users will then receive a notification upon successful build
