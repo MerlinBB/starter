@@ -16,6 +16,6 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-notify": "~0.2.15",
     "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-uncss": "~0.3.3"
+    "grunt-modernizr": "~0.5.2"
   }
 }
