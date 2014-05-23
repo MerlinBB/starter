@@ -43,14 +43,6 @@ module.exports = function (grunt) {
             }
         },
 
-        uncss: {
-            dist: {
-                files: {
-                    "style.css": ["index.html"]
-                }
-            }
-        },
-
         cssmin: {
             minify: {
                 src: "style.css",
