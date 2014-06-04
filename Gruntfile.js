@@ -101,6 +101,9 @@ module.exports = function (grunt) {
         },
 
         watch: {
+            options: {
+                livereload: true
+            },
             css: {
                 files: "styles/*.less",
                 tasks: "buildcss"
@@ -136,7 +139,8 @@ module.exports = function (grunt) {
 
     // List of available tasks
     grunt.registerTask("default", []);
-    grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "uncss", "cssmin", "imagemin", "notify:less"]);
+    grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "uncss", "cssmin", "notify:less"]);
     grunt.registerTask("buildjs", ["jshint", "concat", "uglify", "notify:js"]);
+    grunt.registerTask("buildimg", ["imagemin", "notify:less"]);
 
 };
