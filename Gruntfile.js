@@ -158,6 +158,12 @@ module.exports = function (grunt) {
                     title: "Cashback!",
                     message: "LESS build successful!"
                 }
+            },
+            img: {
+                options: {
+                    title: "Jurassic Park!",
+                    message: "Image minify successful!"
+                }
             }
         }
 
@@ -167,5 +173,5 @@ module.exports = function (grunt) {
     grunt.registerTask("default", []);
     grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "cssmin", "notify:less"]);
     grunt.registerTask("buildjs", ["jshint", "modernizr", "concat", "uglify", "notify:js"]);
-    grunt.registerTask("buildimg", ["imagemin", "notify:less"]);
+    grunt.registerTask("buildimg", ["imagemin", "notify:img"]);
 };
