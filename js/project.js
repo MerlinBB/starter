@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, window, document, undefined) {
     "use strict";
 
     var starter = {
@@ -39,4 +39,4 @@
     // Window Scrolled
     $(window).on("scroll", function () { starter.windowScrolled(); });
 
-} (jQuery));
+})(jQuery, window, document);
