@@ -43,13 +43,13 @@ Alternatively, you can process them at anytime with the following commands.
 
     $ grunt buildcss
     $ grunt buildjs
+    $ grunt buildimg
 
 The CSS build does the following process:
 - Compiles all the .less files imported into style.less
 - Autoprefixes the compiled style.css with vendor prefixes (by default it supports current browser version -2)
 - Checks the prefixed file for CSS Lint errors (based on .csslintrc config)
 - Minifies the file
-- Optimises all images
 - Mac OSX users will then receive a notification upon successful build
 
 The JS build does the following process:
@@ -57,6 +57,10 @@ The JS build does the following process:
 - Searchs the project.js file for Modernizr references and generates a custom build with the tests you need
 - Concatinates all javascript files used in the site
 - Minifies the concatinated file
+- Mac OSX users will then receive a notification upon successful build
+
+The IMG build does the following process:
+- Optimises all images with 'img/' and 'img/favicons' folders
 - Mac OSX users will then receive a notification upon successful build
 
 ##Deployment
