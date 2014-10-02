@@ -15,11 +15,6 @@
 @import "helpers.less";
 @import "grid.less";
 
-::-moz-selection {
-    background:@color-highlight;
-    color:#fff;
-    text-shadow:none;
-}
 ::selection {
     background:@color-highlight;
     color:#fff;
@@ -108,9 +103,9 @@ input[type="submit"] {
 
 
 .page-header {
-    @media (max-width:@screen-sm-min) { }
-    @media (max-width:@screen-md-min) { }
-    @media (max-width:@screen-lg-min) { }
+    @media (min-width:@screen-sm-min) { }
+    @media (min-width:@screen-md-min) { }
+    @media (min-width:@screen-lg-min) { }
 }
 
 
@@ -126,7 +121,7 @@ input[type="submit"] {
 
 
 .page-footer {
-    @media (max-width:@screen-sm-min) { }
-    @media (max-width:@screen-md-min) { }
-    @media (max-width:@screen-lg-min) { }
+    @media (min-width:@screen-sm-min) { }
+    @media (min-width:@screen-md-min) { }
+    @media (min-width:@screen-lg-min) { }
 }

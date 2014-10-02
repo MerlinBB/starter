@@ -35,7 +35,7 @@
     // Images Loaded
     $(window).load(function () { starter.windowLoaded(); });
     // Window Resized (smart debounced event)
-    $(window).bind("debouncedresize", function () { starter.windowResized(); });
+    $(window).resize(_.debounce(function () { starter.windowResized(); }, 200));
     // Window Scrolled
     $(window).on("scroll", function () { starter.windowScrolled(); });
 

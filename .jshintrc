@@ -14,6 +14,7 @@
         "console": true,
         "alert": true,
         "module": true,
+        "_": true,
         "require": true,
         "Modernizr": true
     }

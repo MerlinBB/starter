@@ -164,6 +164,12 @@ module.exports = function (grunt) {
                     title: "Jurassic Park!",
                     message: "Image minify successful!"
                 }
+            },
+            build: {
+                options: {
+                    title: "LYNNNNNNN",
+                    message: "Build successful!"
+                }
             }
         }
 
@@ -174,4 +180,5 @@ module.exports = function (grunt) {
     grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "cssmin", "notify:less"]);
     grunt.registerTask("buildjs", ["jshint", "modernizr", "concat", "uglify", "notify:js"]);
     grunt.registerTask("buildimg", ["imagemin", "notify:img"]);
+    grunt.registerTask("build", ["buildcss", "buildjs", "buildimg", "notify:build"]);
 };
