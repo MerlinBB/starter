@@ -16,7 +16,7 @@
 
     <title>Starter</title>
 
-    <link rel="stylesheet" type="text/css" media="all" href="style.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css?72d5b357"/>
 
     <link rel="shortcut icon" type="image/png" href="img/favicons/logo-icon-32x32.png">
 
@@ -106,7 +106,7 @@
 
     if (!in_array($_SERVER['REMOTE_ADDR'], $dev)) {
         echo ('
-            <script async src="/js/production.js"></script>
+            <script async src="/js/production.js?c86a4e82"></script>
         ');
 
     } else {

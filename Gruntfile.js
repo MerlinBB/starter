@@ -111,6 +111,21 @@ module.exports = function (grunt) {
             }
         },
 
+        hashres: {
+            options: {
+                fileNameFormat: "${name}.${ext}?${hash}",
+                renameFiles: false
+            },
+            prod: {
+                src: [
+                    "js/production.js",
+                    "style.css"
+                ],
+                dest: "index.php",
+            }
+        },
+
+
         imagemin: {
             dynamic: {
                 files: [{
@@ -180,5 +195,5 @@ module.exports = function (grunt) {
     grunt.registerTask("buildcss", ["less", "autoprefixer", "csslint", "cssmin", "notify:less"]);
     grunt.registerTask("buildjs", ["jshint", "modernizr", "concat", "uglify", "notify:js"]);
     grunt.registerTask("buildimg", ["imagemin", "notify:img"]);
-    grunt.registerTask("build", ["buildcss", "buildjs", "buildimg", "notify:build"]);
+    grunt.registerTask("build", ["buildcss", "buildjs", "buildimg", "hashres:prod", "notify:build"]);
 };
