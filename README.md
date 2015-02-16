@@ -2,7 +2,7 @@
 
 A starter template, built around a modern tooling environment.
 
-The project provides modern tooling and a base theme structure so you can jump straight into development. It does not make any stylistic or functional assumptions, just gives you the tools you need to get on with your job.
+The project provides modern tooling and a base structure so you can jump straight into development. It does not make any stylistic or functional assumptions, just gives you the tools you need to get on with your job.
 
 Starter make use of the following projects:
 
@@ -12,7 +12,6 @@ Starter make use of the following projects:
 - http://lesscss.org/
 - http://bower.io/
 - http://gruntjs.com/
-- https://github.com/addyosmani/grunt-uncss
 - https://github.com/ai/autoprefixer
 - http://modernizr.com/
 - http://livereload.com/
