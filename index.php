@@ -94,17 +94,31 @@
 </div>
 
 
-<!-- if we're in production mode, include minified concatenated script
-if not then pull them in unminified individually for easier debugging and include livereload script -->
+<?php
+    // If we're in production mode, include minified concatenated script
+    // if not then pull them in unminified individually for easier debugging
 
-<!--
-<script src="/js/production.js"></script>
--->
-<script src="js/modernizr-custom.js"></script>
-<script src="js/bower/jquery/dist/jquery.js"></script>
-<script src="js/bower/underscore/underscore.js"></script>
-<script src="js/project.js"></script>
-<script src="//localhost:35729/livereload.js"></script>
+    $dev = array(
+        '127.0.0.1',
+        '192.168.1.144',
+        '::1'
+    );
+
+    if (!in_array($_SERVER['REMOTE_ADDR'], $dev)) {
+        echo ('
+            <script async src="/js/production.js"></script>
+        ');
+
+    } else {
+        echo ('
+            <script src="js/modernizr-custom.js"></script>
+            <script src="js/bower/jquery/dist/jquery.js"></script>
+            <script src="js/bower/underscore/underscore.js"></script>
+            <script src="js/project.js"></script>
+            <script src="//localhost:35729/livereload.js"></script>
+        ');
+    }
+?>
 
 </body>
 </html>
