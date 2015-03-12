@@ -13,15 +13,17 @@
 @import "reset.less";
 @import "vars.less";
 @import "helpers.less";
-@import "grid.less";
+
+@import "modules/grid";
+@import "modules/typography";
 
 ::selection {
-    background:@color-highlight;
+    background:@highlight;
     color:#fff;
     text-shadow:none;
 }
 
-* { 
+* {
     box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
@@ -32,40 +34,6 @@
 @media (min-width: @screen-sm-min) { .make-grid(sm); }
 @media (min-width: @screen-md-min) { .make-grid(md); }
 @media (min-width: @screen-lg-min) { .make-grid(lg); }
-
-
-//----------------------------------------------------------------------------//
-//  Typography
-//----------------------------------------------------------------------------//
-
-
-body {
-    font-family:@font-family-base;
-    font-size:@font-size-base;
-    line-height:@line-height-base;
-    color:@color-text;
-}
-
-p { margin-bottom:@space; }
-
-
-//----------------------------------------------------------------------------//
-//  Links
-//----------------------------------------------------------------------------//
-
-
-a:link,
-a:visited {
-    color:@color-link;
-    text-decoration:none;
-}
-a:hover,
-a:focus,
-a:active {
-    color:@color-link-hover;
-    text-decoration:none;
-    outline:none;
-}
 
 
 //----------------------------------------------------------------------------//
